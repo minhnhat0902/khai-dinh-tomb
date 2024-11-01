@@ -195,7 +195,11 @@ select {
   top: 20px;
   right: 20px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
+  padding: 5px;
+  background-color: var(--ivory);
 }
 
 .lang-select * {
