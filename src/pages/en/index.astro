@@ -1,0 +1,379 @@
+---
+import CaptionedImage from "../../components/CaptionedImage.astro";
+import "@fontsource-variable/eb-garamond";
+import "../../stylesheets/global.css";
+
+import ungChar from "../../assets/characters/ung.svg";
+import langChar from "../../assets/characters/lang.svg";
+import Renderer from "../../components/Renderer";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Khải Định tomb: An architecture wonder of Vietnam</title>
+  </head>
+  <body>
+    <div class="lang-select">
+      <a href={"/vi"}>VI</a>
+      <p>|</p>
+      <p>EN</p>
+    </div>
+    <main>
+      <section class="double-border three-columns">
+        <span class="content">
+          <h2 class="heading-large">Khải Định</h2>
+          <h2 class="heading-large">Tomb</h2>
+          <p class="subtitle">An architecture wonder of Vietnam</p>
+        </span>
+        <span class="min-column">
+          <img class="hanzi" src={ungChar.src} alt="應" />
+          <img class="hanzi" src={langChar.src} alt="陵" />
+        </span>
+        <CaptionedImage
+          filename="overhead.jpg"
+          caption="Toàn cảnh khuôn viên lăng Khải Định."
+          className="fig-right"
+        />
+      </section>
+      <section class="double-border">
+        <div class="header">
+          <h2 class="heading-large">1. History</h2>
+        </div>
+        <div class="two-columns">
+          <div id="boi_canh">
+            <span>
+              <h2>Back&shy;ground</h2>
+              <p>
+                King <i>Khải Định</i>, whose real name was <i
+                  >Nguyễn Phúc Bửu Đảo</i
+                >, was born in 1986 and died in 1925. He was the 12th king of
+                the
+                <i>Nguyễn</i> Dynasty, ruling Vietnam under French colonialism. He
+                was notorious for being a gambler, a flamboyant dresser and a puppet
+                for the French. He spent huge sums on magnificent construction projects
+                such as <i>An Định</i> Palace, <i>Kiến Trung</i>
+                Palace and his tomb. These projects along with his 1922 trip to France
+                and grandiose 40th birthday further aroused public anger at the king&rsquo;s
+                character.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="khai_dinh.jpg"
+              caption="King Khải Định in France, 1922."
+            />
+          </div>
+          <div id="nguon_goc">
+            <span>
+              <h2>Construc&shy;tion</h2>
+              <p>
+                Immediately after his coronation in 1916, King <i>Khải Định</i> chose
+                <i>Châu Chữ</i> Mountain, lying 8 kilometers south of <i>Huế</i>
+                Citadel as his resting place. On September 4th, 1920, the mausoleum
+                began construction under the command of the Commander-in-Chief
+                <i>Lê Văn Bá</i>. Later, King <i>Khải Định</i> renamed the mountain
+                to Mount <i>Ứng</i>, so the mausoleum was named <i>Ứng</i> tomb.
+                In 1925, King <i>Khải Định</i> passed away at the age of 40 and was
+                buried in the unfinished mausoleum. His son, King <i>Bảo Đại</i
+                >, took over the tomb&rsquo;s construction. It was not until
+                1931 that <i>Khải Định</i> mausoleum was completed.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="tu_tuan.jpg"
+              caption="King Khải Định’s 40th birthday ceremony"
+            />
+          </div>
+          <div id="dia_the">
+            <span>
+              <h2>Location&rsquo;s Signifi&shy;cance</h2>
+              <p>
+                The mausoleum&rsquo;s location is carefully chosen to ensure
+                harmony with feng shui principles. <i>Châu Chữ</i> Mountain, where
+                the mausoleum leans against, acts as the head rest. A low hill to
+                the mausoleum&rsquo;s front acts as a screen. <i>Châu Ê</i> stream
+                flows from left to right, forming the element of converging water.
+                <i>Chóp Vung</i> Mountain and Mount <i>Kim</i> flank the mausoleum&rsquo;s
+                two sides, forming the elements of &ldquo;blue dragon on the left&rdquo;
+                and &ldquo;white tiger on the right.&rdquo;
+              </p>
+            </span>
+            <CaptionedImage
+              filename="map.jpg"
+              caption="A map of Huế in 1930, with Khải Định’s tomb marked in red."
+            />
+          </div>
+        </div>
+      </section>
+      <section class="double-border">
+        <div class="header">
+          <h2 class="heading-large">2. Archi&shy;tecture</h2>
+        </div>
+        <div class="two-columns">
+          <Renderer client:load lang="en" />
+          <div id="tong_the">
+            <span>
+              <h2>Overview</h2>
+              <p>
+                <i>Khải Định</i> Tomb was built along the mountainside, divided into
+                5 floors. Along the tomb&rsquo;s 127 steps are dragon statues facing
+                downwards. Although it is the smallest tomb among the
+                <i>Nguyễn</i> Dynasty tombs, <i>Khải Định</i> Tomb took the longest
+                to build because of its elaborate and eclectic architecture. The
+                tomb has a blend of traditional Vietnamese, Indian, Buddhist and
+                Western styles. Some materials such as iron, steel, cement and slates
+                were imported from France, while ceramics and colored glass were
+                purchased from China and Japan. Craftsmen from all over Vietnam were
+                summoned for the tomb&rsquo;s construction.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="tuong_rong.jpg"
+              caption="Dragon statues along the steps."
+            />
+          </div>
+          <div id="tam_quan">
+            <span>
+              <h2><i>Tam Quan</i> Gate</h2>
+              <p>
+                The first flight of steps lead to the mausoleum&rsquo;s main
+                entrace&mdash;the Tam Quan Gate. The pointed gate pillars show
+                influence from Indian architecture.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="tam_quan.jpg"
+              caption="Tam Quan Gate: the mausoleum’s main entrance."
+            />
+          </div>
+          <div id="tong_tu">
+            <span>
+              <h2>Mandarin&rsquo;s Houses</h2>
+              <p>
+                Located on the left and right sides of the first floor are two
+                shrines dedicated to honorable mandarins. The roofs are designed
+                in a double-layered rectangular shape traditional to Vietnam.
+                However, unlike other traditional temples, the rafters of the
+                two Mandarin&rsquo;s Houses are made of cement.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="tong_tu.jpg"
+              caption="One of the two Mandarin’s Houses."
+            />
+          </div>
+          <div id="nghi_mon">
+            <span>
+              <h2><i>Nghi Môn</i> Gate</h2>
+              <p>
+                In front of the Honor Court on the second floor is <i
+                  >Nghi Môn</i
+                >
+                Gate. <i>Nghi Môn</i> Gate employs the three-gateway structure similar
+                to temples and palaces in Vietnamese traditional style; most notably,
+                a similar gate with the same name can be seen in
+                <i>Huế</i> Citadel. Nghi Môn Gate&rsquo;s pillars resemble the &ldquo;dragons
+                and clouds encircling pillars&rdquo; of <i>Huế</i>
+                Citadel, but the use of cement and the thicker shape are evident
+                of European influence. Embellished above the middle gateway are two
+                cement dragons facing a ball of fire.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="nghi_mon.jpg"
+              caption="Nghi Môn Gate leading to the second floor."
+            />
+          </div>
+          <div id="tuong">
+            <span>
+              <h2>Rows of Statues</h2>
+              <p>
+                On both sides of the second floor are two rows of life-size
+                statues of civil and military mandarins and soldiers facing the
+                middle of the yard. In addition, a pair of horse statues and a
+                pair of elephant statues are also placed symmetrically on both
+                sides. The stone army served to gaurd the king&rsquo;s journey
+                to the afterlife.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="tuong.jpg"
+              caption="Statues of ức civil mandarins, military mandarins and horses."
+            />
+          </div>
+          <div id="bi_dinh">
+            <span>
+              <h2>Stele Pavil&shy;lion</h2>
+              <p>
+                At the back of the second floor is the Stele Pavilion. The
+                cement pavillion has two levels of ocatagonal roof covered with
+                slate tiles. The design for columns and arches took inspiration
+                from European architecture. Inside the pavillion is a 3.1-meter
+                high stone stele etched with King <i>Khải Định</i>&rsquo;s
+                son&rsquo;s, namely King <i>Bảo Đại</i>&rsquo;s, words about his
+                father&rsquo;s achievements. The stele is intricately carved,
+                similar to other traditional stone steles in Huế.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="bi_dinh.jpg"
+              caption="The octagonal Stele Pavillion housing the stone stele inside."
+            />
+          </div>
+          <div id="tru_bieu">
+            <span>
+              <h2><i>Trụ Biểu</i></h2>
+              <p>
+                The two <i>Trụ Biểu</i>s are tall pillars on either side of the
+                Stele Pavillion. The <i>Trụ Biểu</i>s host spires similar to
+                those of Buddhist stupas.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="tru_bieu.jpg"
+              caption="The Trụ Biểu columns."
+            />
+          </div>
+          <div id="thien_dinh">
+            <span>
+              <h2><i>Thiên Định</i> Palace</h2>
+              <p>
+                On the top floor is <i>Thiên Định</i> Palace&mdash;the main structure
+                of the mausoleum. <i>Thiên Định</i> Palace consists of three main
+                rooms and two side rooms.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="thien_dinh.jpg"
+              caption="Thiên Định Palace."
+            />
+          </div>
+          <div id="khai_thanh">
+            <span>
+              <h2><i>Khải Thành</i> Palace</h2>
+              <p>
+                This is the front room of <i>Thiên Định</i> Palace, where the altar
+                of King Khải Định is located.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="khai_thanh.jpg"
+              caption="Khải Thành Palace."
+            />
+          </div>
+          <div id="chinh_tam">
+            <span>
+              <h2>Burial Chamber</h2>
+              <p>
+                The burial chamber is located behind <i>Khải Thành</i> Palace. The
+                chamber&rsquo;s centerpiece is one-to-one scale bronze statue of
+                King
+                <i>Khải Định</i> cast in France in 1920. Arriving to Vietnam, the
+                statue was plated with a layer of gold by
+                <i>Huế</i> craftsmen. Above the statue is a canopy cast from cement
+                weighing almost one ton. The canopy is decorated with porcelain inlay.
+                King
+                <i>Khải Định</i> was 8 meters below the bronze statue. The room behind
+                the burial chamber is where the king&rsquo;s tablet for worshipping
+                placed. This area is currently off-limits to visitors.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="chinh_tam.jpg"
+              caption="The burial chamber with the bronze statue of the king and the canopy above."
+            />
+          </div>
+          <div id="cuu_long_an_van">
+            <span>
+              <h2>&ldquo;Nine Dragons amidst Fleeting Clouds&rdquo;</h2>
+              <p>
+                On the ceiling of each of the three main rooms of
+                <i>Thiên Định</i> Palace is a &ldquo;Nine Dragons amidst Fleeting
+                Clouds&rdquo; painting. Artist <i>Phan Văn Tánh</i> painted them
+                with his feet to observe his overall process due to the paintings&rsquo;
+                inconvenient placement. Because dragons are a symbol for the king,
+                <i>Phan Văn Tánh</i>&rsquo;s technique was considered
+                blasphemous. According to local legend, during a survey of the
+                tomb construction project, King <i>Khải Định</i> told
+                <i>Phan Văn Tánh</i>: &ldquo; If Vietnam has two
+                <i>Phan Văn Tánh</i>s like you, I would have cut your head off.
+                &rdquo;
+              </p>
+            </span>
+            <CaptionedImage
+              filename="cuu_long_an_van.jpg"
+              caption="A corner of “Nine Dragons amidst Fleeting Clouds” above Khải Thành Palace."
+            />
+          </div>
+          <div id="sanh_su">
+            <span>
+              <h2>Porce&shy;lain Art</h2>
+              <p>
+                The walls and altars of <i>Thiên Định</i> Palace are covered with
+                paintings, reliefs and verses inlaid with porcelain and glass. The
+                porcelain and glass pieces were taken from bottles and bowls from
+                East Asian countries. These colorful works depict images of animals,
+                plants, dragons, clouds, etc., based on the stories of the Vietnamese
+                Three Religions (Confucianism, Taoism and Buddhism) and folklore.
+                The reliefs also depict images of tea trays, crowns, as well as modern
+                items such as alarm clocks, tennis rackets, and oil lamps.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="sanh_su.webp"
+              caption="Some porcelain reliefs on King Khải Định’s altar."
+            />
+          </div>
+        </div>
+      </section>
+      <section class="double-border">
+        <div class="header">
+          <h2 class="heading-large">3. Impact and Value</h2>
+        </div>
+        <div class="two-columns">
+          <div id="tac_dong">
+            <span>
+              <h2>Impact</h2>
+              <p>
+                <i>Khải Định</i> Tomb is one of many examples of King
+                <i>Khải Định</i>&rsquo;s extravagant taste. To pay for the
+                tomb&rsquo;s construction, King <i>Khải Định</i> raised land taxes
+                nationwide by 30%. For that reason, the project further worsened
+                the king&rsquo;s reputation for both the people then and historians
+                now.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="thi_cong.jpg"
+              caption="The tomb’s construction."
+            />
+          </div>
+          <div id="gia_tri">
+            <span>
+              <h2>Cultural Value</h2>
+              <p>
+                <i>Khải Định</i> Tomb&rsquo;s electic architectural style received
+                mixed opinions. Contemporaries thought it was an unorthodox and ostentatious
+                amalgamation. However, many current historians consider the work
+                to be an architectural masterpiece that reflects the diversity in
+                style and ideology of King <i>Khải Định</i>. As a result, in
+                1993, Khai Dinh Tomb, along with many other works in the Hue
+                Imperial Citadel Complex, was recognized by UNESCO as a World
+                Cultural Heritage.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="ky_hoa.webp"
+              caption="A sketch of Khải Định’s tomb by artist Đoàn Quốc."
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,380 @@
+---
+import CaptionedImage from "../../components/CaptionedImage.astro";
+import "@fontsource-variable/eb-garamond";
+import "../../stylesheets/global.css";
+
+import ungChar from "../../assets/characters/ung.svg";
+import langChar from "../../assets/characters/lang.svg";
+import Renderer from "../../components/Renderer";
+---
+
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Lăng Khải Định: Tuyệt tác kiến trúc Việt Nam</title>
+  </head>
+  <body>
+    <div class="lang-select">
+      <p>VI</p>
+      <p>|</p>
+      <a href={"/en"}>EN</a>
+    </div>
+    <main>
+      <section class="double-border three-columns">
+        <span class="content">
+          <h2 class="heading-large">Lăng</h2>
+          <h2 class="heading-large">Khải Định</h2>
+          <p class="subtitle">Tuyệt&nbsp;tác kiến&nbsp;trúc Việt&nbsp;Nam</p>
+        </span>
+        <span class="min-column">
+          <img class="hanzi" src={ungChar.src} alt="應" />
+          <img class="hanzi" src={langChar.src} alt="陵" />
+        </span>
+        <CaptionedImage
+          filename="overhead.jpg"
+          caption="Toàn cảnh khuôn viên lăng Khải Định."
+          className="fig-right"
+        />
+      </section>
+      <section class="double-border">
+        <div class="header">
+          <h2 class="heading-large">1. Lịch&nbsp;sử và nguồn&nbsp;gốc</h2>
+        </div>
+        <div class="two-columns">
+          <div id="boi_canh">
+            <span>
+              <h2>Bối&nbsp;cảnh lịch&nbsp;sử</h2>
+              <p>
+                Vua Khải Định tên huý là Nguyễn Phúc Bửu Đảo, sinh vào năm 1986
+                và mất năm 1925. Ông là vị vua thứ 12 của Nhà Nguyễn trị vì
+                trong giai đoạn đất nước bị thực dân Pháp đô hộ. Ông nổi tiếng
+                là một vị vua ăn chơi, cờ bạc, ăn mặc diêm dúa và nhu nhược
+                trước người Pháp, đến độ người dân Huế thời bây giờ truyền tụng
+                nhau câu ca dao &ldquo;Tiếng đồn Khải Định nịnh Tây, Nghề này
+                thì lấy ông này tiên sư.&rdquo; Ông tiêu tốn tiền của vào những
+                công trình nguy nga như cung An Định, điện Kiến Trung và lăng
+                của ông. Quá trình thi công của lăng, chuyến công du Pháp năm
+                1922 và buổi lễ tứ tuần đại khánh 1924 càng dấy lên nhiều phẫn
+                nộ trong quần chúng nhân dân trước nhân phẩm của vua Khải Định.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="khai_dinh.jpg"
+              caption="Vua Khải Định tại Pháp năm 1922."
+            />
+          </div>
+          <div id="nguon_goc">
+            <span>
+              <h2>Nguồn&nbsp;gốc công&nbsp;trình</h2>
+              <p>
+                Ngay sau khi lên ngôi năm 1916, vua Khải Định chọn núi Châu Chữ,
+                hay còn gọi là Châu Ê, cách kinh thành Huế 8km về phía Nam làm
+                nơi an nghỉ. Đến ngày 04/09/1920, lăng được khởi công dưới sự
+                chỉ huy của Tiền quân Đô thống phủ Lê Văn Bá. Về sau, vua Khải
+                Định đổi tên núi Châu Chữ thành Ứng Sơn, nên lăng được đặt theo
+                là Ứng Lăng. Năm 1925, Vua Khải Định băng hà ở tuổi 40 và được
+                an táng trong khuôn viên lăng dù công trình vẫn chưa hoàn thiện.
+                Con trai ông, tức vua Bảo Đại, tiếp quản quá trình thi công lăng
+                cha và phải đến năm 1931 thì lăng Khải Định mới hoàn thành.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="tu_tuan.jpg"
+              caption="Buổi lễ Tứ Tuần Đại Khánh của vua Khải Định."
+            />
+          </div>
+          <div id="dia_the">
+            <span>
+              <h2>Địa&nbsp;thế</h2>
+              <p>
+                Lăng toạ lạc tại một vị trí hoà hợp về mặt phong thuỷ. Núi Châu
+                Chữ nơi lăng tựa vào làm hậu chẩm, phía trước lăng có ngọn đồi
+                thấp làm tiền án và dòng suối Châu Ê chảy từ trái sang phải tạo
+                nên yếu tố minh đường, thuỷ tụ. Hai bên là núi Chóp Vung và núi
+                Kim Sơn chầu lăng, tức tả thanh long, hữu bạch hổ.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="map.jpg"
+              caption="Bản đồ Huế năm 1930, với vị trí lăng Khải Định được đánh dấu đỏ."
+            />
+          </div>
+        </div>
+      </section>
+      <section class="double-border">
+        <div class="header">
+          <h2 class="heading-large">2. Kiến&nbsp;trúc</h2>
+        </div>
+        <div class="two-columns">
+          <Renderer client:load lang="vi" />
+          <div id="tong_the">
+            <span>
+              <h2>Tổng&nbsp;thể</h2>
+              <p>
+                Lăng Khải Định được xây theo sườn núi, chia làm 5 tầng lầu và
+                127 bậc cấp, dọc theo bậc cấp có tượng rồng hướng xuống. Dù là
+                lăng có diện tích nhỏ nhất trong các lăng triều Nguyễn nhưng
+                lăng Khải Định tốn nhiều thời gian nhất để xây dựng bởi lối kiến
+                trúc đa dạng và kỳ công. Lăng có sự pha trộn giữa phong cách
+                truyền thống Việt Nam, Ấn Độ, Phật giáo và cả Tây phương. Một số
+                vật liệu như sắt, thép, xi măng và ngói Ardoise được nhập từ
+                Pháp, còn gốm sứ và thuỷ tinh màu được mua từ Trung Quốc và Nhật
+                Bản. Những nghệ nhân trên khắp cả nước được triệu tập cho quá
+                trình thi công lăng, nhằm đưa bàn tay khéo léo của họ để kết hợp
+                những trường phái và chất liệu cách biệt thành một công trình
+                nguy nga.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="tuong_rong.jpg"
+              caption="Tượng rồng dọc theo bờ bậc cấp."
+            />
+          </div>
+          <div id="tam_quan">
+            <span>
+              <h2>Cổng Tam&nbsp;Quan</h2>
+              <p>
+                Sau dãy bậc cấp đầu tiên là đến cổng chính của lăng&mdash;cổng
+                Tam Quan. Trụ cổng có hình tháp nhọn mang ảnh hưởng của kiến
+                trúc Ấn Độ.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="tam_quan.jpg"
+              caption="Cổng Tam Quan: cổng chính của lăng."
+            />
+          </div>
+          <div id="tong_tu">
+            <span>
+              <h2>Tòng&nbsp;Tự</h2>
+              <p>
+                Nằm ở hai bên trái phải của tầng một là hai điện thờ các vị quan
+                có công của đất nước, gọi lần lượt là Tả Tòng Tự và Hữu Tòng Tự.
+                Mái được thiết kế theo lối chồng diêm tám mái với hai tầng mái
+                hình chữ nhật truyền thống của Việt Nam. Khác với các ngôi đền
+                truyền thống khác, các thanh vì kèo của hai Tòng Tự được làm từ
+                xi măng.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="tong_tu.jpg"
+              caption="Một trong hai Tòng Tự."
+            />
+          </div>
+          <div id="nghi_mon">
+            <span>
+              <h2>Cổng Nghi&nbsp;Môn</h2>
+              <p>
+                Trước khi bước đến sân chầu Bái Đình tại tầng Hai là một cánh
+                cổng khác—cổng Nghi Môn. Cổng Nghi Môn được xây theo kiến trúc
+                ba cổng tương tự các đền đài và cung điện theo lối truyền thống
+                của Việt Nam, điển hình là cổng Nghi Môn tại Kinh thành Huế. Bốn
+                trụ của cổng tương tự phong cách &ldquo;long vân đồng trụ&rdquo;
+                ở Kinh thành Huế nhưng chất liệu xi măng và hình dáng cột lại
+                mang âm hưởng Roman. Bên trên lối đi chính giữa cổng là hình ảnh
+                hai con rồng hướng về quả cầu lửa.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="nghi_mon.jpg"
+              caption="Cổng Nghi Môn dẫn vào tầng hai."
+            />
+          </div>
+          <div id="tuong">
+            <span>
+              <h2>Hàng&nbsp;tượng</h2>
+              <p>
+                Hai bên của tầng hai là hai hàng tượng quan văn, quan võ và lính
+                chầu kích thước người thật, hướng mặt về giữa sân. Ngoài ra, một
+                cặp tượng ngựa và một cặp tượng voi được cũng được đặt đối xứng
+                hai bên.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="tuong.jpg"
+              caption="Cận cảnh những bức tượng quan văn, quan võ và ngựa."
+            />
+          </div>
+          <div id="bi_dinh">
+            <span>
+              <h2>Bi&nbsp;Đình</h2>
+              <p>
+                Phía cuối sân tầng hai là Bi Đình xây bằng xi măng hình bát giác
+                với hai tầng mái lợp ngói ardoise, kiến trúc cột và vòm theo lối
+                Roman biến thể. Bên trong đình là tấm bia đá cao 3,1 m do con
+                của vua Khải Định, tức vua Bảo Đại, biên soạn về các thành tựu
+                của cha mình. Tấm bia được chạm trổ tinh xảo, tương tự các bia
+                đá truyền thống khác tại Huế.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="bi_dinh.jpg"
+              caption="Bi Đình hình bát giác với tấm bia ở trong."
+            />
+          </div>
+          <div id="tru_bieu">
+            <span>
+              <h2>Trụ&nbsp;Biểu</h2>
+              <p>
+                Hai bên Bi Đình là hai cột Trụ Biểu được thiết kế theo hình dáng
+                cột stoupa trong Phật giáo.
+              </p>
+            </span>
+            <CaptionedImage filename="tru_bieu.jpg" caption="Cột Trụ Biểu." />
+          </div>
+          <div id="thien_dinh">
+            <span>
+              <h2>Cung Thiên&nbsp;Định</h2>
+              <p>
+                Từ tầng hai đi qua hai tầng trung gian nữa thì đến cung Thiên
+                Định—điện chính của Lăng. Cung Thiên Định gồm ba gian chính và
+                hai gian chái ở hai bên.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="thien_dinh.jpg"
+              caption="Cung Thiên Định."
+            />
+          </div>
+          <div id="khai_thanh">
+            <span>
+              <h2>Điện Khải&nbsp;Thành</h2>
+              <p>
+                Đây là gian trước của cung Thiên Định, là nơi đặt án thờ vua
+                Khải Định.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="khai_thanh.jpg"
+              caption="Điện Khải Thành."
+            />
+          </div>
+          <div id="chinh_tam">
+            <span>
+              <h2>Chính&nbsp;Tẩm</h2>
+              <p>
+                Chính tẩm toạ lạc phía sau điện Khải Thành. Nơi đây có đặt một
+                bức tượng vua Khải Định kích thước 1:1 được đúc bằng đồng tại
+                Pháp năm 1920. Khi mang về đến Việt Nam thì bức tượng được các
+                nghệ nhân tại Huế đã mạ thêm một lớp vàng. Bên trên bức tượng
+                vua Khải Định là tấm bửu tán được đúc từ xi măng nặng gần một
+                tấn. Mặc dù tấm bửu tán có phần khá lớn và nặng nề nhưng qua bàn
+                tay của các nghệ nhân, bức bửu tán từ xi măng trở nên thanh
+                thoát dưới lớp khảm sành sứ tựa tơ lụa. 9m bên dưới tượng vua
+                Khải Định là nơi mai táng thi hài của ông. Gian phòng ở phía sau
+                Chính Tẩm là nơi đặt bài vị của vua. Khu vực này hiện tại không
+                được phép tham quan.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="chinh_tam.jpg"
+              caption="Chính tẩm với tượng đồng vua Khải Định và tấm bửu tán phía trên."
+            />
+          </div>
+          <div id="cuu_long_an_van">
+            <span>
+              <h2>Cửu&nbsp;Long Ẩn&nbsp;Vân</h2>
+              <p>
+                Trên trần của mỗi gian chính trong ba gian của cung Thiên Định
+                là một bức tranh Cửu Long Ẩn Vân. Nghệ nhân Phan Văn Tánh đã vẽ
+                chúng bằng chân nhằm tiện quan sát tổng thể quá trình bởi vị trí
+                bất tiện của những bức tranh. Vì hình ảnh con rồng đại diện cho
+                vua nên kỹ thuật vẽ của Phan Văn Tánh lúc ấy được xem như chẳng
+                khác nào phỉ báng nhà vua. Tương truyền rằng, trong một lần khảo
+                sát công trình, vua Khải Định đã bảo Phan Văn Tánh rằng:
+                &ldquo;Nếu như Việt Nam này có hai Phan Văn Tánh như nhà ngươi
+                thì ta đã chặt đầu nhà ngươi rồi.&rdquo; Một điều kỳ lạ hơn hết
+                là sau gần một thế kỷ, những bức tranh vẫn không bám mạng nhện.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="cuu_long_an_van.jpg"
+              caption="Một góc của bức Cửu Long Ẩn Vân trên trần của điện Khải Thành."
+            />
+          </div>
+          <div id="sanh_su">
+            <span>
+              <h2>Nghệ&nbsp;thuật sành&nbsp;sứ</h2>
+              <p>
+                Các bức tường và án thờ của cung Thiên Định được phủ kính bởi
+                những bức tranh, phù điêu và câu đối được khảm từ sành sứ và
+                thuỷ tinh. Những mảnh sành sứ và thuỷ tinh được lấy từ các chai
+                lọ và chén bát từ các nước Đông Á. Các tác phẩm này phác hoạ
+                hình ảnh động vật, cây cỏ, long vân,&hellip; một cách sinh động,
+                phỏng theo điển tích Tam giáo và trong dân gian. Ngoài ra, các
+                phù điêu còn khắc hoạ các hình ảnh như tứ quý, bát bửu, ngũ
+                phúc, bộ khay trà, vương miện,&hellip; cho đến những công cụ tân
+                thời như đồng hồ báo thức, vợt tennis, đèn dầu hỏa.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="sanh_su.webp"
+              caption="Một số phù điêu bằng sành sứ trên án thờ vua Khải Định."
+            />
+          </div>
+        </div>
+      </section>
+      <section class="double-border">
+        <div class="header">
+          <h2 class="heading-large">3. Tác động và giá trị</h2>
+        </div>
+        <div class="two-columns">
+          <div id="tac_dong">
+            <span>
+              <h2>Tác&nbsp;động</h2>
+              <p>
+                Lăng Khải Định là một trong nhiều minh chứng cho sở thích xa xỉ
+                của vua Khải Định. Cũng vì lẽ đó, công trình này góp phần gia
+                tăng tiếng xấu cho nhà vua trong mắt nhân dân và sử gia. Vì chi
+                trả cho quá trình thi công lăng mà vua Khải Định đã nâng thuế
+                ruộng đất trên cả nước lên 30%.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="thi_cong.jpg"
+              caption="Quá trình thi công lăng."
+            />
+          </div>
+          <div id="gia_tri">
+            <span>
+              <h2>Giá&nbsp;trị văn&nbsp;hoá</h2>
+              <p>
+                Sự kết hợp của nhiều phong cách kiến trúc khiến Lăng Khải Định
+                nhận được nhiều luồng ý kiến khác nhau. Nhiều cá nhân đương thời
+                cho rằng nó là một sự kết hợp hỗn tạp, thiếu chính thống và quá
+                phô trương. Tuy nhiên, nhiều sử gia đương đại đánh giá công
+                trình là một kiệt tác kiến trúc phong phú, thể hiện được đa dạng
+                trong phong cách và tư tưởng của vua Khải Định. Nhằm tôn vinh và
+                lưu giữ ý nghĩa văn hoá vô giá này, năm 1993, Lăng Khải Định
+                cùng với nhiều công trình khác thuộc quần thể Cố đô Huế được
+                UNESCO công nhận là Di sản Văn hoá Thế giới.
+              </p>
+            </span>
+            <CaptionedImage
+              filename="ky_hoa.webp"
+              caption="Ký hoạ lăng Khải Định bởi hoạ sĩ Đoàn Quốc."
+            />
+          </div>
+        </div>
+      </section>
+      <section class="double-border">
+        <div class="header">
+          <h2 class="heading-large">4. Tác giả</h2>
+        </div>
+        <div class="two-columns">
+          <div id="tac_gia">
+            <span>
+              <p>Tôi đã bỏ quá nhiều thời gian cho cái website này.</p>
+            </span>
+            <CaptionedImage filename="me.jpg" caption="Tác giả của website." />
+          </div>
+        </div>
+      </section>s
+    </main>
+  </body>
+</html>

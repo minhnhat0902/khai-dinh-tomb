@@ -1,0 +1,273 @@
+@font-face {
+  font-family: "Morning Calm";
+  src: url("../assets/fonts/MorningCalm.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+:root {
+  --ivory: #fdf1d8;
+  --red: #c1121f;
+  --dark-blue: #003049;
+}
+
+* {
+  border-color: var(--red);
+  outline-color: var(--red);
+  margin: 0;
+  padding: 0;
+  border-width: 2px;
+  font-family: "EB Garamond Variable", serif;
+  font-size: 18px;
+  text-align: justify;
+  color: var(--dark-blue);
+}
+
+body {
+  background-color: var(--ivory);
+  padding: 60px 60px 0 60px;
+  counter-reset: caption;
+}
+
+/* body::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 2000vh;
+  max-height: 100%;
+  z-index: 1000;
+  content: "";
+  opacity: 30%;
+  pointer-events: none;
+  background-image: url("/images/noise.png");
+  background-repeat:repeat;
+  filter: contrast(0.3) brightness(1.2);
+  overflow: hidden;
+} */
+
+main {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+.double-border {
+  border-style: solid;
+  outline-width: 4px;
+  outline-offset: 2px;
+  outline-style: solid;
+}
+
+.double-border > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+.three-columns {
+  display: grid;
+  grid-template-areas: "content min-column pic";
+  grid-template-columns: auto min-content auto;
+}
+
+.content {
+  grid-area: content;
+}
+
+.min-column {
+  grid-area: min-column;
+  border-style: none solid;
+}
+
+.fig-right {
+  grid-area: pic;
+}
+
+.header {
+  border-bottom-style: solid;
+}
+
+.two-columns {
+  gap: 60px;
+}
+
+.two-columns > * {
+  height: min-content;
+  display: flex;
+  gap: 60px;
+}
+
+.two-columns > style,
+.two-columns > script {
+  display: none;
+}
+
+.two-columns > astro-island {
+  display: contents;
+}
+
+.two-columns > :nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.two-columns > * > * {
+  width: 50%;
+}
+
+.renderer {
+  width: 100%;
+  max-height: 100vh;
+  aspect-ratio: 1/1;
+}
+
+#tac_gia {
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  height: fit-content;
+  filter: sepia(0.4) saturate(1.2);
+}
+
+spline-viewer {
+  width: 100%;
+}
+
+h2,
+h2 i {
+  color: var(--red);
+  font-family: "Morning Calm", serif;
+}
+
+.hanzi {
+  width: 5em;
+  height: 5em;
+  padding: 0.5em;
+}
+
+h2 {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 10px;
+  hyphens: manual;
+}
+
+h2.heading-large {
+  font-family: "Morning Calm", serif;
+  font-size: 5em;
+}
+
+figcaption {
+  font-size: 16px;
+  font-style: italic;
+  align-self: flex-start;
+}
+
+figcaption::before {
+  counter-increment: caption;
+  content: "Hình " counter(caption) ": ";
+}
+
+.subtitle {
+  font-size: 24px;
+  text-align: center;
+}
+
+i {
+  font-size: 1em;
+}
+
+select {
+  background-color: var(--ivory);
+}
+
+.lang-select {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.lang-select * {
+  color: var(--red);
+}
+
+@media (max-width: 992px) {
+  body {
+    font-size: 16px;
+  }
+
+  .hanzi {
+    width: 4em;
+    height: 4em;
+  }
+
+  h2 {
+    font-family: "Morning Calm", serif;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  h2.heading-large {
+    font-family: "Morning Calm", serif;
+    font-size: 4em;
+  }
+
+  .subtitle {
+    font-size: 21px;
+  }
+
+  figcaption {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 30px 30px 0 30px;
+  }
+
+  section {
+    margin-bottom: 30px;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  .three-columns {
+    grid-template-areas:
+      "content min-column"
+      "pic     pic";
+  }
+
+  .min-column {
+    border-width: 0 0 0 2px;
+  }
+
+  .fig-right {
+    border-top-style: solid;
+  }
+}
+
+@media (max-width: 600px) {
+  .two-columns > *,
+  .two-columns > :nth-child(even) {
+    flex-direction: column;
+  }
+
+  .two-columns > * > * {
+    width: 100%;
+  }
+}
